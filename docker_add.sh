@@ -6,5 +6,5 @@ read -p "Please input the first host port number to transfor the container's por
 for((i=1;i<=$num_con;i=i+1))
 	do
 		_port=$(($port+i-1))
-		docker run -t -i --name "$name_con$i" -d -p $_port:80 ubuntu:14.04 /bin/bash
+		docker run -t -i --name "$name_con$i" -d -p $_port:80 sevenot/ubuntu:test1 /bin/bash
 	done
